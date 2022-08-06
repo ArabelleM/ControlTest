@@ -9,9 +9,8 @@ string[] array = new string[]{
 
 Console.WriteLine("[" + string.Join(", ", array) + "]");
 
-void SelectThreeSymbol(string[] array) {
+void SelectThreeSymbol(string[] array, int count) {
     int lenOfarray = array.Length;
-    int count = 3; // magic number of symbol form the task
     string[] arraySelect = new string[lenOfarray];
     int countOfString = 0;
 
@@ -25,4 +24,4 @@ void SelectThreeSymbol(string[] array) {
     Console.WriteLine("[" + string.Join(", ", arraySelect) + "]");
 }
 
-SelectThreeSymbol(array);
+SelectThreeSymbol(array, 3);
