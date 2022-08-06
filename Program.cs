@@ -8,11 +8,19 @@ string[] array = new string[]{
         "1H01", "1H01", "1S02", "Юля", "1M02", "1M02", "1M02"};
 
 Console.WriteLine("[" + string.Join(", ", array) + "]");
-/*
-void SelectThreeSymbol(string[] array) {
-    int m = array.Length;
-    for(int i = 0; i < m; i++) {
 
+void SelectThreeSymbol(string[] array) {
+    int lenOfarray = array.Length;
+    int count = 3; // magic number of symbol form the task
+    string[] arrayTemp = new string[lenOfarray];
+    int countOfString = 0;
+    for(int i = 0; i < lenOfarray; i++) {
+        if(array[i].Length <= count) {
+            arrayTemp[countOfString] = array[i];
+            countOfString++;
+        }
     }
+    Console.WriteLine("[" + string.Join(", ", arrayTemp) + "]");
 }
-*/
+
+SelectThreeSymbol(array);
